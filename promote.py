@@ -1,4 +1,4 @@
-# Python uses pound signs to indicate comments.  There are three actions required below, indicated in comments leading with 1,2, or 3.
+# Python uses pound signs to indicate comments.  There are four actions required below, indicated in comments leading with 1,2, or 3.
 # In Python, spaces and/or tabs are very important. Be careful to not lose tabs.
 # Create a new standard Notebook in ArcGIS Online and add this entire script to a single code block. Customize as above. Save it. Run it.
 # ArcGIS Online Notebooks can also be scheduled to run.  The script below expects to be run once a week.
@@ -24,10 +24,12 @@ for user in gis_users:
         # filter for  new users from the past week.
         print(user.username + ": " + str(round(diffCreateDays,2)) + " days")
         if round(diffCreateDays,2) < 7:
+            # 3. Change the word 'student' below to the part of the username that is unique to students (e.g. USDstudent02034).
+            # 3. (cont.) If teachers have the unique string, add the unique string where 'student' is AND change 'if not m' to 'if m'
             m=re.search('student', user.username)
             # filter for 'student' in username
             if not m:  #if username doesn't contain 'students', then run below
-                # 3. Pick an option below, removing the pound sign before one of the user.update_role() lines below.
+                # 4. Pick an option below, removing the pound sign before one of the user.update_role() lines below.
                 #Pick one of the two update lines below (standard publisher or to a custom role. Get your own custom role id and insert it below.)
                 #user.update_role(role='org_publisher')  # This is a built-in role type and available in all ArcGIS Online organizations.
                 #user.update_role(role='npqoaTX2gNx8MYZC')  # This is the hashed id of a custom role. It will be different for your organization and role.
