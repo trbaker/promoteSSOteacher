@@ -23,7 +23,7 @@ for user in gis_users:
         diffCreateDays = diffCreateSec/(24*60*60)    #Last login in days (rounded)
         # filter for  new users from the past week.
         print(user.username + ": " + str(round(diffCreateDays,2)) + " days")
-        if round(diffCreateDays,2) < 365:
+        if round(diffCreateDays,2) < 3:
             # 3. Change the word 'student' below to the part of the username that is unique to students (e.g. USDstudent02034).
             # 3. (cont.) If teachers have the unique string, add the unique string where 'student' is AND change 'if not m' to 'if m'
             regex = r"([A-Z])"
