@@ -1,6 +1,6 @@
 ## A few links that may help with customizing these scripts.
 
-### ArcGIS Search query string reference
+### ArcGIS search query string reference
 <LI>https://developers.arcgis.com/rest/users-groups-and-items/search-reference.htm
 
 
