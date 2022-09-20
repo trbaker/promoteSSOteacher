@@ -27,9 +27,9 @@ for user in gis_users:
             # 3. Change the word 'student' below to the part of the username that is unique to students (e.g. USDstudent02034).
             # 3. (cont.) If teachers have the unique string, add the unique string where 'student' is AND change 'if not m' to 'if m'
             regex = r"([A-Z])"
-            m=re.search(regex, user.username[:3]) # this check is redundant given the original search query string
+            m=re.search(regex, user.username[:1]) # this check is redundant given the original search query string
             #print('m: ' + str(m))
-            if m:  
+            if NOT m:  
                 # 4. Pick an option below, removing the pound sign before one of the user.update_role() lines below.
                 #Pick one of the two update lines below (standard publisher or to a custom role. Get your own custom role id and insert it below.)
                 #user.update_role(role='org_publisher')  # This is a built-in role type and available in all ArcGIS Online organizations.
